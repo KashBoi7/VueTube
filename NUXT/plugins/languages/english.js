@@ -55,7 +55,10 @@ module.exports = {
       language: "Language",
       backup: "Backup",
       backupinfo: "Backup or restore your application settings",
-      restore: "Restore"
+      restore: "Restore",
+      bedtime: "Bedtime",
+      confirm: "Confirm",
+      bedtimeinfo: "Choose what time you go to sleep to tell you when to stop watching"
     },
     theme: {
       normal: "Normal",

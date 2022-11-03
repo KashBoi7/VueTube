@@ -30,6 +30,43 @@
       </v-card-actions>
     </v-card>
 
+        <v-card
+      flat
+      class="pb-5 background"
+      :class="$vuetify.theme.dark ? 'lighten-1' : 'darken-1'"
+      :style="{ borderRadius: `${roundTweak / 2}rem` }"
+    >
+      <v-card-title>{{ lang.bedtime }}</v-card-title>
+      <input type="text" class="time-pickable" readonly>
+      <v-card-text>
+          <v-select
+    class="fixed"      
+    v-model="selectedLang"
+    background-color="background"
+    :items="hour"
+    label="App Language"
+    solo
+    rounded
+  />
+            <v-select
+            class="fixed2"
+    v-model="selectedLang"
+    background-color="background"
+    :items="hour"
+    label="App Language"
+    solo
+    rounded
+  />
+      </v-card-text>
+
+      <v-card-text>
+        <p>{{ lang.backupinfo }}</p>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn rounded depressed class="background--text ml-2" color="primary" @click="registryConfrim">{{ lang.confirm }}</v-btn>
+      </v-card-actions>
+    </v-card>
+
 
   </div>
 </template>
@@ -43,6 +80,7 @@ export default {
   data() {
     return {
       lang: {},
+      hour: ['01','02','03','04','06','07','08','09','10','11','12'],
     };
   },
   computed: {
@@ -91,6 +129,9 @@ export default {
     },
     registryRestore() {
 
+    },
+    registryConfrim() {
+      
     }
   }
 };
@@ -103,5 +144,15 @@ export default {
 
 section {
   padding: 0 1em 1em 1em;
+}
+.fixed {
+    position: fixed;
+    width: 150px;
+    height: 200px;
+}
+.fixed2{
+  position: fixed;
+    width: 60px;
+    height: 200px;
 }
 </style>

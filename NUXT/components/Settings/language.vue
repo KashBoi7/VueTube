@@ -4,7 +4,7 @@
     v-model="selectedLang"
     background-color="background"
     :items="langs"
-    label="App Language"
+    label="Hour"
     solo
     rounded
   />
